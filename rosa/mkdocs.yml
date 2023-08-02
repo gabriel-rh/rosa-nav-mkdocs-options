@@ -6,6 +6,7 @@ theme:
     - content.code.copy
     - content.code.annotate
     - navigation.instant
+    - navigation.prune
 markdown_extensions:
   - admonition
   - pymdownx.details
