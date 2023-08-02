@@ -13,8 +13,8 @@ markdown_extensions:
   - def_list
   - md_in_html
   - attr_list
-plugins:
-  - offline
+#plugins:
+#  - offline
 nav:
   - "About":
     - "Welcome": rosa/welcome/index.md
