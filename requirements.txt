@@ -1,0 +1,4 @@
+mkdocs-macros-plugin
+mkdocs-include-markdown-plugin
+mkdocs-exclude
+mkdocs-material

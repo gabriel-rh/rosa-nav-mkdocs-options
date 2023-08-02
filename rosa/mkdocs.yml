@@ -1,0 +1,260 @@
+site_name: ROSA
+site_url: https://www.example.com
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.annotate
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - def_list
+  - md_in_html
+  - attr_list
+nav:
+  - "About":
+    - "Welcome": rosa/welcome/index.md
+    - "Legal notice": rosa/welcome/legal-notice.md
+  - "What's new":
+    - "What's new with ROSA": rosa/rosa_release_notes/rosa-release-notes.md
+  - "Introduction to ROSA":
+    - "Understanding ROSA": rosa/rosa_architecture/rosa-understanding.md
+    - "ROSA architecture":
+      - "Architecture concepts": rosa/rosa_architecture/rosa_architecture_sub/rosa-basic-architecture-concepts.md
+      - "Architecture models": rosa/rosa_architecture/rosa_architecture_sub/rosa-architecture-models.md
+    - "Policies and service definition":
+      - "About availability for ROSA": rosa/rosa_architecture/rosa_policy_service_definition/rosa-policy-understand-availability.md
+      - "Overview of responsibilities for ROSA": rosa/rosa_architecture/rosa_policy_service_definition/rosa-policy-responsibility-matrix.md
+      - "ROSA service definition": rosa/rosa_architecture/rosa_policy_service_definition/rosa-service-definition.md
+      - "ROSA update life cycle": rosa/rosa_architecture/rosa_policy_service_definition/rosa-life-cycle.md
+      - "Understanding process and security for ROSA": rosa/rosa_architecture/rosa_policy_service_definition/rosa-policy-process-security.md
+    - "About IAM resources for ROSA with STS": rosa/rosa_architecture/rosa-sts-about-iam-resources.md
+    - "OpenID Connect Overview": rosa/rosa_architecture/rosa-oidc-overview.md
+    - "Support for ROSA": rosa/rosa_architecture/rosa-getting-support.md
+  - "Getting started":
+    - "ROSA quickstart guide": rosa/rosa_getting_started/rosa-quickstart-guide-ui.md
+    - "Comprehensive guide to getting started with ROSA": rosa/rosa_getting_started/rosa-getting-started.md
+    - "Understanding the ROSA with STS deployment workflow": rosa/rosa_getting_started/rosa-sts-getting-started-workflow.md
+  - "Prepare your environment":
+    - "AWS prerequisites for ROSA with STS": rosa/rosa_planning/rosa-sts-aws-prereqs.md
+    - "ROSA IAM role resources": rosa/rosa_planning/rosa-sts-ocm-role.md
+    - "Limits and scalability": rosa/rosa_planning/rosa-limits-scalability.md
+    - "Planning your environment": rosa/rosa_planning/rosa-planning-environment.md
+    - "Required AWS service quotas": rosa/rosa_planning/rosa-sts-required-aws-service-quotas.md
+    - "Setting up your environment": rosa/rosa_planning/rosa-sts-setting-up-environment.md
+  - "Install ROSA with HCP clusters":
+    - "Creating ROSA with HCP clusters using the default options": rosa/rosa_hcp/rosa-hcp-sts-creating-a-cluster-quickly.md
+    - "Using the Node Tuning Operator on ROSA with HCP": rosa/rosa_hcp/rosa-tuning-config.md
+  - "Install ROSA Classic clusters":
+    - "Creating a ROSA cluster with STS using the default options": rosa/rosa_install_access_delete_clusters/rosa-sts-creating-a-cluster-quickly.md
+    - "Creating a ROSA cluster with STS using customizations": rosa/rosa_install_access_delete_clusters/rosa-sts-creating-a-cluster-with-customizations.md
+    - "Interactive cluster creation mode reference": rosa/rosa_install_access_delete_clusters/rosa-sts-interactive-mode-reference.md
+    - "Creating an AWS PrivateLink cluster on ROSA": rosa/rosa_install_access_delete_clusters/rosa-aws-privatelink-creating-cluster.md
+    - "Accessing a ROSA cluster": rosa/rosa_install_access_delete_clusters/rosa-sts-accessing-cluster.md
+    - "Configuring identity providers using Red Hat OpenShift Cluster Manager": rosa/rosa_install_access_delete_clusters/rosa-sts-config-identity-providers.md
+    - "Revoking access to a ROSA cluster": rosa/rosa_install_access_delete_clusters/rosa-sts-deleting-access-cluster.md
+    - "Deleting a ROSA cluster": rosa/rosa_install_access_delete_clusters/rosa-sts-deleting-cluster.md
+    - "Deploying ROSA without AWS STS":
+      - "AWS prerequisites for ROSA": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-aws-prereqs.md
+      - "Understanding the ROSA deployment workflow": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-getting-started-workflow.md
+      - "Required AWS service quotas": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-required-aws-service-quotas.md
+      - "Configuring your AWS account": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-config-aws-account.md
+      - "Installing the ROSA CLI": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-installing-rosa.md
+      - "Creating a ROSA cluster without AWS STS": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-creating-cluster.md
+      - "Configuring a private cluster": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-private-cluster.md
+      - "Deleting access to a ROSA cluster": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-deleting-access-cluster.md
+      - "Deleting a ROSA cluster": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-deleting-cluster.md
+      - "Command quick reference for creating clusters and users": rosa/rosa_install_access_delete_clusters/rosa_getting_started_iam/rosa-quickstart.md
+  - "CLI tools":
+    - "CLI tools overview": rosa/cli_reference/index.md
+    - "OpenShift CLI (oc)":
+      - "Getting started with the OpenShift CLI": rosa/cli_reference/openshift_cli/getting-started-cli.md
+      - "Configuring the OpenShift CLI": rosa/cli_reference/openshift_cli/configuring-cli.md
+      - "Usage of oc and kubectl commands": rosa/cli_reference/openshift_cli/usage-oc-kubectl.md
+      - "Managing CLI profiles": rosa/cli_reference/openshift_cli/managing-cli-profiles.md
+      - "Extending the OpenShift CLI with plugins": rosa/cli_reference/openshift_cli/extending-cli-plugins.md
+      - "OpenShift CLI developer command reference": rosa/cli_reference/openshift_cli/developer-cli-commands.md
+      - "OpenShift CLI administrator command reference": rosa/cli_reference/openshift_cli/administrator-cli-commands.md
+    - "Developer CLI (odo)": rosa/cli_reference/odo-important-update.md
+    - "Knative CLI (kn) for use with OpenShift Serverless": rosa/cli_reference/kn-cli-tools.md
+    - "Pipelines CLI (tkn)":
+      - "Installing tkn": rosa/cli_reference/tkn_cli/installing-tkn.md
+      - "Configuring tkn": rosa/cli_reference/tkn_cli/op-configuring-tkn.md
+      - "Basic tkn commands": rosa/cli_reference/tkn_cli/op-tkn-reference.md
+    - "opm CLI":
+      - "Installing the opm CLI": rosa/cli_reference/opm/cli-opm-install.md
+      - "opm CLI reference": rosa/cli_reference/opm/cli-opm-ref.md
+    - "Operator SDK":
+      - "Installing the Operator SDK CLI": rosa/cli_reference/osdk/cli-osdk-install.md
+      - "Operator SDK CLI reference": rosa/cli_reference/osdk/cli-osdk-ref.md
+    - "ROSA CLI":
+      - "Getting started with the ROSA CLI": rosa/cli_reference/rosa_cli/rosa-get-started-cli.md
+      - "Managing objects with the ROSA CLI": rosa/cli_reference/rosa_cli/rosa-manage-objects-cli.md
+      - "Checking account and version information with the ROSA CLI": rosa/cli_reference/rosa_cli/rosa-checking-acct-version-cli.md
+      - "Checking logs with the ROSA CLI": rosa/cli_reference/rosa_cli/rosa-checking-logs-cli.md
+  - "Red Hat OpenShift Cluster Manager":
+    - "Red Hat OpenShift Cluster Manager": rosa/ocm/ocm-overview.md
+  - "Cluster administration":
+    - "Configuring private connections":
+      - "Configuring private connections": rosa/rosa_cluster_admin/cloud_infrastructure_access/rosa-configuring-private-connections.md
+      - "Configuring AWS VPC peering": rosa/rosa_cluster_admin/cloud_infrastructure_access/dedicated-aws-peering.md
+      - "Configuring AWS VPN": rosa/rosa_cluster_admin/cloud_infrastructure_access/dedicated-aws-vpn.md
+      - "Configuring AWS Direct Connect": rosa/rosa_cluster_admin/cloud_infrastructure_access/dedicated-aws-dc.md
+    - "Nodes":
+      - "About machine pools": rosa/rosa_cluster_admin/rosa_nodes/rosa-nodes-machinepools-about.md
+      - "Managing compute nodes": rosa/rosa_cluster_admin/rosa_nodes/rosa-managing-worker-nodes.md
+      - "Configuring machine pools in Local Zones": rosa/rosa_cluster_admin/rosa_nodes/rosa-nodes-machinepools-configuring.md
+      - "About autoscaling nodes on a cluster": rosa/rosa_cluster_admin/rosa_nodes/rosa-nodes-about-autoscaling-nodes.md
+  - "Authentication and authorization":
+    - "Assuming an AWS IAM role for a service account": rosa/authentication/assuming-an-aws-iam-role-for-a-service-account.md
+    - "Managing security context constraints": rosa/authentication/managing-security-context-constraints.md
+  - "Upgrading":
+    - "Preparing to upgrade ROSA to 4.9": rosa/upgrading/rosa-upgrading-cluster-prepare.md
+    - "Upgrading ROSA with STS": rosa/upgrading/rosa-upgrading-sts.md
+    - "Upgrading ROSA": rosa/upgrading/rosa-upgrading.md
+    - "Upgrading ROSA with HCP": rosa/upgrading/rosa-hcp-upgrading.md
+  - "CI/CD":
+    - "Builds":
+      - "Setting up additional trusted certificate authorities for builds": rosa/cicd/builds/setting-up-trusted-ca.md
+  - "Add-on services":
+    - "Adding services to a cluster": rosa/adding_service_cluster/adding-service.md
+    - "Available services": rosa/adding_service_cluster/rosa-available-services.md
+  - "Storage":
+    - "Storage overview": rosa/storage/index.md
+    - "Understanding ephemeral storage": rosa/storage/understanding-ephemeral-storage.md
+    - "Understanding persistent storage": rosa/storage/understanding-persistent-storage.md
+    - "Configuring persistent storage":
+      - "Persistent storage using AWS Elastic Block Store": rosa/storage/persistent_storage/persistent-storage-aws.md
+    - "Using Container Storage Interface (CSI)":
+      - "Configuring CSI volumes": rosa/storage/container_storage_interface/persistent-storage-csi.md
+      - "Managing the default storage class": rosa/storage/container_storage_interface/persistent-storage-csi-sc-manage.md
+      - "AWS Elastic Block Store CSI Driver Operator": rosa/storage/container_storage_interface/persistent-storage-csi-ebs.md
+      - "AWS Elastic File Service CSI Driver Operator": rosa/storage/container_storage_interface/osd-persistent-storage-aws-efs-csi.md
+    - "Generic ephemeral volumes": rosa/storage/generic-ephemeral-vols.md
+    - "Dynamic provisioning": rosa/storage/dynamic-provisioning.md
+  - "Registry":
+    - "Registry overview": rosa/registry/index.md
+    - "Image Registry Operator in Red Hat OpenShift Service on AWS": rosa/registry/configuring-registry-operator.md
+    - "Accessing the registry": rosa/registry/accessing-the-registry.md
+    - "Exposing the registry": rosa/registry/securing-exposing-registry.md
+  - "Networking":
+    - "Understanding the DNS Operator": rosa/networking/dns-operator.md
+    - "Understanding the Ingress Operator": rosa/networking/ingress-operator.md
+    - "OpenShift SDN default CNI network provider":
+      - "Enabling multicast for a project": rosa/networking/openshift_sdn/enabling-multicast.md
+    - "Network verification": rosa/networking/network-verification.md
+    - "Configuring a cluster-wide proxy during installation": rosa/networking/configuring-cluster-wide-proxy.md
+    - "CIDR range definitions": rosa/networking/cidr-range-definitions.md
+    - "Network policy":
+      - "About network policy": rosa/networking/network_policy/about-network-policy.md
+      - "Creating a network policy": rosa/networking/network_policy/creating-network-policy.md
+      - "Viewing a network policy": rosa/networking/network_policy/viewing-network-policy.md
+      - "Deleting a network policy": rosa/networking/network_policy/deleting-network-policy.md
+      - "Configuring multitenant isolation with network policy": rosa/networking/network_policy/multitenant-network-policy.md
+    - "Configuring Routes":
+      - "Route configuration": rosa/networking/routes/route-configuration.md
+      - "Secured routes": rosa/networking/routes/secured-routes.md
+  - "Application development":
+    - "Deployments":
+      - "Custom domains for applications": rosa/applications/deployments/osd-config-custom-domains-applications.md
+  - "Backing up and restoring applications":
+    - "Installing OADP on ROSA with STS": rosa/rosa_backing_up_and_restoring_applications/backing-up-applications.md
+  - "Logging":
+    - "Release notes": rosa/logging/cluster-logging-release-notes.md
+    - "About Logging": rosa/logging/cluster-logging.md
+    - "Installing Logging": rosa/logging/cluster-logging-deploying.md
+    - "Accessing the service logs": rosa/logging/sd-accessing-the-service-logs.md
+    - "Viewing cluster logs in the AWS Console": rosa/logging/rosa-viewing-logs.md
+    - "Configuring your Logging deployment":
+      - "About the Cluster Logging custom resource": rosa/logging/config/cluster-logging-configuring-cr.md
+      - "Configuring the logging collector": rosa/logging/config/cluster-logging-collector.md
+      - "Configuring the log store": rosa/logging/config/cluster-logging-log-store.md
+      - "Configuring the log visualizer": rosa/logging/config/cluster-logging-visualizer.md
+      - "Configuring Logging storage": rosa/logging/config/cluster-logging-storage-considerations.md
+      - "Configuring CPU and memory limits for Logging components": rosa/logging/config/cluster-logging-memory.md
+      - "Using tolerations to control Logging pod placement": rosa/logging/config/cluster-logging-tolerations.md
+      - "Moving the Logging resources with node selectors": rosa/logging/config/cluster-logging-moving-nodes.md
+      - "Maintenance and support": rosa/logging/config/cluster-logging-maintenance-support.md
+    - "Logging with the LokiStack": rosa/logging/cluster-logging-loki.md
+    - "Viewing logs for a specific resource": rosa/logging/viewing-resource-logs.md
+    - "Viewing cluster logs in Kibana": rosa/logging/cluster-logging-visualizer.md
+    - "Forwarding logs to third party systems": rosa/logging/cluster-logging-external.md
+    - "Enabling JSON logging": rosa/logging/cluster-logging-enabling-json-logging.md
+    - "Collecting and storing Kubernetes events": rosa/logging/cluster-logging-eventrouter.md
+    - "Updating Logging": rosa/logging/cluster-logging-upgrading.md
+    - "Viewing cluster dashboards": rosa/logging/cluster-logging-dashboards.md
+    - "Troubleshooting Logging":
+      - "Viewing Logging status": rosa/logging/troubleshooting/cluster-logging-cluster-status.md
+      - "Viewing the status of the log store": rosa/logging/troubleshooting/cluster-logging-log-store-status.md
+      - "Understanding Logging alerts": rosa/logging/troubleshooting/cluster-logging-alerts.md
+      - "Collecting logging data for Red Hat Support": rosa/logging/troubleshooting/cluster-logging-must-gather.md
+      - "Troubleshooting for Critical Alerts": rosa/logging/troubleshooting/cluster-logging-troubleshooting-for-critical-alerts.md
+    - "Uninstalling Logging": rosa/logging/cluster-logging-uninstall.md
+    - "Exported fields": rosa/logging/cluster-logging-exported-fields.md
+  - "Monitoring":
+    - "Monitoring overview": rosa/monitoring/monitoring-overview.md
+    - "Accessing monitoring for user-defined projects": rosa/monitoring/sd-accessing-monitoring-for-user-defined-projects.md
+    - "Configuring the monitoring stack": rosa/monitoring/configuring-the-monitoring-stack.md
+    - "Disabling monitoring for user-defined projects": rosa/monitoring/sd-disabling-monitoring-for-user-defined-projects.md
+    - "Enabling alert routing for user-defined projects": rosa/monitoring/enabling-alert-routing-for-user-defined-projects.md
+    - "Managing metrics": rosa/monitoring/managing-metrics.md
+    - "Managing alerts": rosa/monitoring/managing-alerts.md
+    - "Reviewing monitoring dashboards": rosa/monitoring/reviewing-monitoring-dashboards.md
+    - "Accessing third-party monitoring APIs": rosa/monitoring/accessing-third-party-monitoring-apis.md
+    - "Troubleshooting monitoring issues": rosa/monitoring/troubleshooting-monitoring-issues.md
+    - "Config map reference for the Cluster Monitoring Operator": rosa/monitoring/config-map-reference-for-the-cluster-monitoring-operator.md
+  - "Service Mesh":
+    - "Service Mesh 2.x":
+      - "About OpenShift Service Mesh": rosa/service_mesh/v2x/ossm-about.md
+      - "Service Mesh 2.x release notes": rosa/service_mesh/v2x/servicemesh-release-notes.md
+      - "Service Mesh architecture": rosa/service_mesh/v2x/ossm-architecture.md
+      - "Service Mesh deployment models": rosa/service_mesh/v2x/ossm-deployment-models.md
+      - "Service Mesh and Istio differences": rosa/service_mesh/v2x/ossm-vs-community.md
+      - "Preparing to install Service Mesh": rosa/service_mesh/v2x/preparing-ossm-installation.md
+      - "Installing the Operators": rosa/service_mesh/v2x/installing-ossm.md
+      - "Creating the ServiceMeshControlPlane": rosa/service_mesh/v2x/ossm-create-smcp.md
+      - "Adding workloads to a service mesh": rosa/service_mesh/v2x/ossm-create-mesh.md
+      - "Enabling sidecar injection": rosa/service_mesh/v2x/prepare-to-deploy-applications-ossm.md
+      - "Upgrading Service Mesh": rosa/service_mesh/v2x/upgrading-ossm.md
+      - "Managing users and profiles": rosa/service_mesh/v2x/ossm-profiles-users.md
+      - "Security": rosa/service_mesh/v2x/ossm-security.md
+      - "Traffic management": rosa/service_mesh/v2x/ossm-traffic-manage.md
+      - "Metrics, logs, and traces": rosa/service_mesh/v2x/ossm-observability.md
+      - "Performance and scalability": rosa/service_mesh/v2x/ossm-performance-scalability.md
+      - "Deploying to production": rosa/service_mesh/v2x/ossm-deploy-production.md
+      - "Federation": rosa/service_mesh/v2x/ossm-federation.md
+      - "Extensions": rosa/service_mesh/v2x/ossm-extensions.md
+      - "3scale WebAssembly for 2.1": rosa/service_mesh/v2x/ossm-threescale-webassembly-module.md
+      - "3scale Istio adapter for 2.0": rosa/service_mesh/v2x/threescale-adapter.md
+      - "Troubleshooting Service Mesh": rosa/service_mesh/v2x/ossm-troubleshooting-istio.md
+      - "Control plane configuration reference": rosa/service_mesh/v2x/ossm-reference-smcp.md
+      - "Kiali configuration reference": rosa/service_mesh/v2x/ossm-reference-kiali.md
+      - "Jaeger configuration reference": rosa/service_mesh/v2x/ossm-reference-jaeger.md
+      - "Uninstalling Service Mesh": rosa/service_mesh/v2x/removing-ossm.md
+    - "Service Mesh 1.x":
+      - "Service Mesh 1.x release notes": rosa/service_mesh/v1x/servicemesh-release-notes.md
+      - "Service Mesh architecture": rosa/service_mesh/v1x/ossm-architecture.md
+      - "Service Mesh and Istio differences": rosa/service_mesh/v1x/ossm-vs-community.md
+      - "Preparing to install Service Mesh": rosa/service_mesh/v1x/preparing-ossm-installation.md
+      - "Installing Service Mesh": rosa/service_mesh/v1x/installing-ossm.md
+      - "Security": rosa/service_mesh/v1x/ossm-security.md
+      - "Traffic management": rosa/service_mesh/v1x/ossm-traffic-manage.md
+      - "Deploying applications on Service Mesh": rosa/service_mesh/v1x/prepare-to-deploy-applications-ossm.md
+      - "Data visualization and observability": rosa/service_mesh/v1x/ossm-observability.md
+      - "Custom resources": rosa/service_mesh/v1x/ossm-custom-resources.md
+      - "3scale Istio adapter for 1.x": rosa/service_mesh/v1x/threescale-adapter.md
+      - "Removing Service Mesh": rosa/service_mesh/v1x/removing-ossm.md
+  - "Serverless":
+    - "About Serverless":
+      - "Serverless overview": rosa/serverless/about/about-serverless.md
+  - "Troubleshooting":
+    - "Remote health monitoring with connected clusters":
+      - "About remote health monitoring": rosa/sd_support/remote_health_monitoring/about-remote-health-monitoring.md
+      - "Showing data collected by remote health monitoring": rosa/sd_support/remote_health_monitoring/showing-data-collected-by-remote-health-monitoring.md
+      - "Using Insights to identify issues with your cluster": rosa/sd_support/remote_health_monitoring/using-insights-to-identify-issues-with-your-cluster.md
+    - "Troubleshooting expired offline access tokens": rosa/sd_support/rosa-troubleshooting-expired-tokens.md
+    - "Troubleshooting installations": rosa/sd_support/rosa-troubleshooting-installations.md
+    - "Troubleshooting IAM roles": rosa/sd_support/rosa-troubleshooting-iam-resources.md
+    - "Troubleshooting cluster deployments": rosa/sd_support/rosa-troubleshooting-deployments.md
+    - "Red Hat OpenShift Service on AWS managed resources": rosa/sd_support/rosa-managed-resources.md
