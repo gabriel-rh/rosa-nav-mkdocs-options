@@ -5,6 +5,7 @@ theme:
   features:
     - content.code.copy
     - content.code.annotate
+    - navigation.instant
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -12,6 +13,8 @@ markdown_extensions:
   - def_list
   - md_in_html
   - attr_list
+plugins:
+  - offline
 nav:
   - "About":
     - "Welcome": rosa/welcome/index.md
